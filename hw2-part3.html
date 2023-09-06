@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .box {
+      margin:200px 500px;
+    }
+
+    .info {
+      border: 1px solid grey;
+       width: 300px; 
+       height: 100px; 
+       text-align: center;
+       margin-left: 50px;
+       margin-top: -10px;
+       display: none;
+    }
+
+    table {
+      width: 400px;
+      height: 500px;
+      border: 1px solid grey;
+      border-collapse: collapse;
+    }
+
+    td{
+      width: 150px;
+      border: 1px solid grey;
+      
+      
+    }
+
+    input {
+      width: 80%;
+      height: 80%;
+      background-color: #fff;
+      border: none;
+    }
+    button {
+      width: 250px;
+      margin-bottom: 20px;
+      margin-left: 90px;
+    }
+    th, .input-info{
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+    .cal {
+      margin-top: 20px;
+      width: 100px;
+      height: 50px;
+      background-color: #58c8fc;
+      border-radius: 20px;
+      border: 1px solid white;
+      color: white;
+      font-size: 20px;
+      
+    }
+
+    .input-num {
+      border: 1px solid rgb(183, 221, 253);
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+    .value {
+      padding-right: 10px;
+      text-align: right;
+      
+    }
+
+    tr:nth-child(2) {
+      text-align: center;
+    }
+
+   
+
+
+
+  
+    
+    
+  </style>
+</head>
+<body>
+  <div style="width: 200px; height: 30px; background-color: #ff0000;line-height: 30px; padding-left: 20px;">
+    <a href="index.html" style="color: white;font-weight: bolder; margin:0 auto;">Back to Homepage</a>
+  </div>
+  <div class="box">
+    <button class="intro">Click to Show/Hide Instructions</button>
+    <div class="info">
+      <p>The foreign exchange rates in June 2021</p>
+      <p>Enter a dollar amount in the table below to see the corresponding foreign exchange values'</p>
+    </div>
+    <div>
+       <table >
+      <tr><th colspan="3">Monetary Exchange Rates</th></tr>
+      <tr>
+        <td >Currency</td>
+        <td>Rate</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>Euro</td>
+        <td class="E-rate">0.84</td>
+        <td class="E-value value" ></td>
+       </tr>
+       <tr>
+        <td >Canadian Dollar</td>
+        <td class="C-rate">1.23</td>
+        <td class="C-value value"></td>
+       </tr>
+       <tr>
+        <td >Hong Kong Dollar</td>
+        <td class="HK-rate">7.76</td>
+        <td class="HK-value value"></td>
+       </tr>
+       <tr>
+        <td >Japanese Yen</td>
+        <td class="J-rate">110.80</td>
+        <td class="J-value value" ></td>
+       </tr>
+       <tr>
+        <td >Mexican Peso</td>
+        <td class="M-rate">19.82</td>
+        <td class="M-value value"></td>
+       </tr>
+       <tr >
+        <td colspan="2" class="input-info">Enter Amount of U.S. Dollars	</td>
+        <td ><input type="number" class="input-num" placeholder="input number"></td>
+       </tr>
+      
+    </table>
+    <button class="cal">calculate</button>
+    </div>
+    
+  </div>
+  <script>
+      
+   let cal = document.querySelector('.cal')
+      
+      cal.addEventListener('click',function(){
+        let num = +document.querySelector('.input-num').value;
+        document.querySelector('.E-value').innerHTML = (num * 0.84).toFixed(2);
+        document.querySelector('.C-value').innerHTML = (num * 1.23).toFixed(2);
+        document.querySelector('.HK-value').innerHTML = (num * 7.76).toFixed(2);
+        document.querySelector('.J-value').innerHTML = (num * 7.76).toFixed(2);
+        document.querySelector('.M-value').innerHTML = (num * 19.82).toFixed(2); 
+      });
+   
+      
+      $(function(){
+        $('.intro').click(function(){
+          $('.info').slideToggle("slow");
+        })
+      })
+      $(function(){
+        $('.cal').click(function(){
+          $('tr:nth-child(8)').css("background-color", "yellow")
+        })
+      })
+  </script>
+</body>
+</html>

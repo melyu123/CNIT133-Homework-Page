@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta
+      name="mainPage"
+      content="Homework 1 for JavaScript, jQuery, AJAX course at CCSF"
+    >
+    <title>CNIT 133 Homework Page</title>
+    <link rel="stylesheet" type="text/css" href="./hw1.css" >
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <img class="header-background" src="./1.jpg" alt="header-background" >
+        <h1 class="title">CNIT 133 Homework Page</h1>
+      </header>
+      <div class="content ">
+          <ul class="navi">
+              <li class="list-item current"> Homework 2</li>
+              <li class="list-item">Homework 3</li>
+              <li class="list-item">Homework 4</li>
+              <li class="list-item">Homework 5</li>
+              <li class="list-item">Homework 6</li>
+              <li class="list-item"> Homework 7</li>
+              <li class="list-item"> Homework 8 </li>
+           </ul>
+           <div class="hw-content ">
+              <div class="hw"  style="display: block; "> 
+                 <h2 class="h2-title">Homework 2 - Basic Operations</h2>
+
+                  <div class="box1">
+                    <ul class="part1">
+                        <li class='p1-img'><a href="hw2-part1.html"><img src="doc1.jpg" alt=""></a></li>
+                        <li class="section"><a href="hw2-part1.html">Part 1</a></li>
+                        <li class="info">Create a webpage that contains a script tho display the following (using document.write())</li>
+                    </ul>
+
+                    <ul class="part1 ">
+                      <li class='p1-img'><a href="part2.html"><img src="forms.jpg" alt=""></a></li>
+                      <li class="section"><a href="part2.html">Part 2</a></li>
+                      <li class="info" >Create a webpage with a form that will have:
+                                        three input boxes for the user to type three integers (numbers)</li>
+                    </ul>
+
+                    <ul class="part1">
+                        <li class='p1-img'><a href="hw2-part3.html"><img src="part3.jpg" alt=""></a></li>
+                        <li class="section"><a href="hw2-part3.html">Part 3</a></li>
+                        <li class="info">Create a webpage that display The exchange rates for 1 U.S. dollar in June 2021 were</li>
+                    </ul>
+                  </div>
+              </div>
+              
+              <div class="hw"> 3</div>
+              <div class="hw"> 4</div>
+              <div class="hw"> 5</div>
+              <div class="hw"> 6</div>
+              <div class="hw"> 7</div>
+              <div class="hw"> 8</div>
+              
+           </div>
+      </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+       $(function(){
+        $('.navi li').click(function(){
+          $(this).addClass('current').siblings().removeClass('current');
+          let index = $(this).index();
+         $('.hw-content .hw').eq(index).show().siblings().hide();
+        })
+       })
+    </script>
+
+  </body>
+</html>
