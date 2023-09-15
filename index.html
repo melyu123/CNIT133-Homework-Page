@@ -12,7 +12,7 @@
   <body>
     <div>
       <header class="header">
-        <img class="header-background" src="./1.jpg" alt="header-background" >
+        <img class="header-background" src="img/1.jpg" alt="header-background" >
         <h1 class="title">CNIT 133 Homework Page</h1>
       </header>
       <div class="content ">
@@ -25,33 +25,93 @@
               <li class="list-item"> Homework 7</li>
               <li class="list-item"> Homework 8 </li>
            </ul>
+
            <div class="hw-content ">
-              <div class="hw"  style="display: block; "> 
+              <div class="hw" id="h2"  style="display: block; "> 
                  <h2 class="h2-title">Homework 2 - Basic Operations</h2>
 
                   <div class="box1">
                     <ul class="part1">
-                        <li class='p1-img'><a href="hw2-part1.html"><img src="doc1.jpg" alt=""></a></li>
+                        <li class='p1-img'><a href="hw2-part1.html"><img src="img/doc1.jpg" alt=""></a></li>
                         <li class="section"><a href="hw2-part1.html">Part 1</a></li>
                         <li class="info">Create a webpage that contains a script tho display the following (using document.write())</li>
                     </ul>
 
                     <ul class="part1 ">
-                      <li class='p1-img'><a href="part2.html"><img src="forms.jpg" alt=""></a></li>
-                      <li class="section"><a href="part2.html">Part 2</a></li>
+                      <li class='p1-img'><a href="hw2-part2.html"><img src="img/forms.jpg" alt=""></a></li>
+                      <li class="section"><a href="hw2-part2.html">Part 2</a></li>
                       <li class="info" >Create a webpage with a form that will have:
                                         three input boxes for the user to type three integers (numbers)</li>
                     </ul>
 
                     <ul class="part1">
-                        <li class='p1-img'><a href="hw2-part3.html"><img src="part3.jpg" alt=""></a></li>
+                        <li class='p1-img'><a href="hw2-part3.html"><img src="img/part3.jpg" alt=""></a></li>
                         <li class="section"><a href="hw2-part3.html">Part 3</a></li>
                         <li class="info">Create a webpage that display The exchange rates for 1 U.S. dollar in June 2021 were</li>
                     </ul>
                   </div>
               </div>
               
-              <div class="hw"> 3</div>
+              <div class="hw " id="hw3-page"> 
+               
+
+                <div class="hw3-content">
+                  <div class="part1-content">
+                    <div class="part1-info">
+                      <div class="hw3-part1">
+                        <img class="js-img" src="./img/func.jpg" alt="">
+                        <div class="direction1">
+                          <div class="right">
+                            <p class="h3-title">Part 1</p>
+                            <p>Create a webpage that contains:</p>
+                            <ul class="h3-list">
+                              <li>the heading Student Grades</li>
+                              <li>a form with input boxes for Homework Average, Mid-Term Exam Score, Final Exam Score, and Participation - all those grades will be entered as integers</li>
+                              <li>you should have a button for submitting the data and a button to clear the form</li>
+                              <li>you should have a button for submitting the data and a button to clear the form</li>
+                              <li>......</li>
+                          </ul>
+                          <br/>
+                          <br/>
+                          <p class="logo"><a href="./hw3-part1.html"><img src="./img/website-icon-hi.png" alt=""></a>click button to HomeworkPage</p>
+                         </div>
+                          
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="part2">
+                    <p class="h3-title">Part 2</p>
+                    <p >Create a web page</p>
+                    <ul class="h3-list">
+                      <li>he page will contain a script that includes at the top of your form  a text box for the salesperson's name for the user to enter. </li>
+                      <li>The user will input the quantity of items sold, for each item.
+                          You will use that input to calculate how much the salesperson sold and how much he/she will earn, and then output the results.</li>
+                      <li>Use input boxes to input the number sold for each of the items 1-4.</li>
+                      <li>The results of total sold in dollars and the total money that will be received by the sale person should be right-justify</li>
+                      <li>......</li>
+                    </ul>
+                   <p class="logo"><a href="./hw3-part2.html"><img src="./img/website-icon-hi.png" alt=""></a>click button to HomeworkPage</p>
+                  </div>
+
+                   <div class="part3">
+                    <p class="h3-title">Extra Credit</p>
+                    <p >Create a web page</p>
+                    <ul class="h3-list">
+                      <li>Write a program that will help an elementary school student learn multiplication.</li>
+                      <li>Write a program that will help an elementary school student learn multiplication.</li>
+                      <li>With those two numbers, you should present a question such as: How much is X times Y? where X is one of the random numbers and Y is the other random number</li>
+                      <li>......</li>
+                    </ul>
+                   <p class="logo"><a href="./hw3-part3.html"><img src="./img/website-icon-hi.png" alt=""></a>click button to HomeworkPage</p>
+                  </div>
+                </div>  
+              </div> 
+               
+                    
+                
               <div class="hw"> 4</div>
               <div class="hw"> 5</div>
               <div class="hw"> 6</div>
@@ -71,6 +131,8 @@
          $('.hw-content .hw').eq(index).show().siblings().hide();
         })
        })
+
+       
     </script>
 
   </body>
